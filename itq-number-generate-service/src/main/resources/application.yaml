@@ -1,0 +1,10 @@
+server:
+  port: 8081
+---
+spring:
+  application:
+    name: itq-number-generate-service
+  data:
+    mongodb:
+      uri: mongodb://mongoadmin:mongoadminpassword@localhost:27017/itq-numbers-db?authSource=admin
+      auto-index-creation: true
