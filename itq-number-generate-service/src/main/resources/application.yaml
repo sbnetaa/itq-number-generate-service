@@ -6,13 +6,5 @@ spring:
     name: itq-number-generate-service
   data:
     mongodb:
-      uri: ${SPRING_MONGODB_URI:mongodb://mongoadmin:mongoadminpassword@localhost:27017/itq-numbers-db?authSource=admin}
-      #authentication-database: admin
-      username: itq-user
-      password: itq-password
-      #username: mongoadmin
-      #password: mongoadminpassword
-      host: ${SPRING_DATA_MONGODB_HOST:localhost}
-      port: 27017
-      database: itq-numbers-db
+      uri: ${SPRING_MONGODB_URI:mongodb://itq-user:itq-password@localhost:27017/itq-numbers-db?authSource=admin}
       auto-index-creation: true
