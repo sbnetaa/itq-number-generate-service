@@ -11,7 +11,7 @@
 	<groupId>ru.terentyev</groupId>
 	<artifactId>itq-number-generate-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>itq-number-generate-service</name>
 	<description>ITQ Number generate service</description>
 	<url/>

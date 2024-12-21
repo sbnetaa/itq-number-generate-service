@@ -1,17 +1,17 @@
-FROM maven:3.8.6-openjdk-23-slim AS builder
+FROM maven:3.9.9-eclipse-temurin-23 AS builder
 
-WORKDIR /itq/numbers-service
+WORKDIR /ready_app
 
 COPY pom.xml .
 COPY src ./src
 
-RUN mvn clean package
+RUN mvn clean package -DskipTests
 
 FROM openjdk:23-jdk-slim
-WORKDIR /itq/numbers-service
+WORKDIR /ready_app
 
-COPY --from=builder /itq/numbers-service/target/*.jar itq-numbers-service.jar
+COPY --from=builder /ready_app/target/*.jar ready_app.jar
 
 EXPOSE 8081
 
-ENTRYPOINT ["java", "-jar", "itq-numbers-service.jar"]
+ENTRYPOINT ["java", "-jar", "ready_app.jar"]
