@@ -2,7 +2,7 @@ spring:
   data:
     mongodb:
       auto-index-creation: true
-      uri: ${TESTCONTAINERS_URI:mongodb://mongoadmin:mongoadminpassword@localhost:27017/itq-numbers-db?authSource=admin}
+      uri: ${TESTCONTAINERS_URI:mongodb://itq-user:itq-password@localhost:27017/itq-numbers-db?authSource=admin}
 testcontainers:
   enabled: ${TESTCONTAINERS_ENABLED:false}
   host:
