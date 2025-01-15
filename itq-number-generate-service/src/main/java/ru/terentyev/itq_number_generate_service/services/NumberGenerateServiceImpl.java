@@ -40,16 +40,4 @@ public class NumberGenerateServiceImpl implements NumberGenerateService{
             return generateRandomPartAndSave(datePart, numberObject, ++attemptsCount);
         }
     }
-
-    //    private NumberObject generateRandomPartAndSave(String datePart, NumberObject numberObject){
-//        try {
-//            numberObject.setNumber(String.valueOf(random.nextInt(10000, 99999)) + datePart);
-//            numberObject = numberRepository.save(numberObject);
-//            System.out.println("Уникальный номер " + numberObject.getNumber() + " создан");
-//        } catch (DuplicateKeyException e) {
-//            System.out.println("Ошибка дублирования номера. Пробуем еще раз");
-//            numberObject = numberRepository.save(generateRandomPartAndSave(datePart, numberObject));
-//        }
-//        return numberObject;
-//    }
 }
